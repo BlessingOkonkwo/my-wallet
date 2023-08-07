@@ -9,9 +9,11 @@ import {
 import { createStitches } from '@stitches/react';
 import { WalletActions } from '../Molecules';
 import { FundButton } from '.';
+import { useGlobalContext } from '../../context';
 
 
 const Hamburger = () => {
+    const { wallet } = useGlobalContext();
   return (
     <div className="relative">
         <DropdownMenu.Root>
@@ -23,10 +25,20 @@ const Hamburger = () => {
 
             <DropdownMenu.Portal>
                 <DropdownMenu.Content className="absolute w-max right-2 border border-[#] rounded-lg py-6 px-4 bg-white shadow-lg flex flex-col items-center justify-center gap-4">
-                    <div className="flex flex-col items-center justify-center gap-6 w-full">
+                    {
+                        wallet === 'MASTER' ? (
+                            <FundButton desc="+ Fund Distribution Wallet" variant="blue" />
+                        ) : (
+                            <div className="flex flex-col items-center justify-center gap-6 w-full">
+                                <FundButton desc="+ Tranfer to Master Wallet" variant="blue" />
+                                <FundButton desc="+ Fund Institutional Wallet" variant="white" />
+                            </div>
+                        )
+                    }
+                    {/* <div className="flex flex-col items-center justify-center gap-6 w-full">
                         <FundButton desc="+ Tranfer to Master Wallet" variant="blue" />
                         <FundButton desc="+ Fund Institutional Wallet" variant="white" />
-                    </div>
+                    </div> */}
                 </DropdownMenu.Content>
             </DropdownMenu.Portal>
         </DropdownMenu.Root>

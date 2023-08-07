@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Montserrat } from 'next/font/google'
+import { GlobalContextProvider } from './context/globalContext'
 
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({
@@ -20,7 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <GlobalContextProvider>
+          {children}
+        </GlobalContextProvider>
+
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+      </body>
     </html>
   )
 }

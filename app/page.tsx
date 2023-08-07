@@ -3,11 +3,11 @@ import { Header, SubHeader, ChartComponent, PieSection, SideBar } from './compon
 
 export default function Home() {
   return ( 
-    <div className="flex ">
-      <div className="bg-[#1e252d] ">
+    <div className="flex grid-cols-12">
+      <div className="col-span-1 bg-[#1e252d]">
         <SideBar />
       </div>
-      <main className="px-10 py-4 min-w-0">
+      <main className="px-10 py-4 col-span-11 grow">
         <Header />
         <SubHeader />
         <ChartComponent />

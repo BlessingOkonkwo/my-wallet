@@ -15,11 +15,11 @@ const FundButton: React.FC<Props> = (props) => {
     <div className="text-[14px] bg-[#f8fafe]">
         <Dialog.Root>
             <Dialog.Trigger asChild >
-                <button className={`shadow-md ${props.variant === "blue" ? 'bg-[#174cff] text-white hover:bg-[#1542d6]' : 'bg-white text-[#174cff] hover:bg-[#f9f9f9]'} px-6 py-2 rounded cursor-pointer font-medium border-[1.5px] border-solid border-[#174cff]`}>{props.desc}</button>
+                <button className={`shadow-md ${props.variant === "blue" ? 'bg-[#174cff] text-white hover:bg-[#1542d6]' : 'bg-white text-[#174cff] hover:bg-[#f9f9f9]'} text-center px-6 py-2 rounded cursor-pointer font-medium border-[1.5px] border-solid border-[#174cff]`}>{props.desc}</button>
             </Dialog.Trigger>
             <Dialog.Portal>
                 <Dialog.Overlay className="DialogOverlay bg-[#00000070] fixed inset-0" />
-                <Dialog.Content className="DialogContent h-full overflow-y-auto bg-[#f8fafe] rounded-md fixed top-[50%] left-[50%] w-[90vw] max-w-[450px] md:max-w-none max-h-[85vh] focus:outline-none">
+                <Dialog.Content className="DialogContent h-[50vh] overflow-y-auto bg-[#f8fafe] rounded-md fixed top-[50%] left-[50%] w-[90vw] max-w-[450px] md:max-w-none max-h-[85vh] focus:outline-none">
                     <div className="mx-6 mt-8">
                         <Dialog.Title className="DialogTitle m-0 font-semibold text-lg">Select an Institutional Wallet Type</Dialog.Title>
                         <Dialog.Description className="DialogDescription text-sm text-[#8499b1] ">

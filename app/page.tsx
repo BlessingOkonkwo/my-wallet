@@ -1,12 +1,13 @@
 "use client";
-import { Header, SubHeader, Chart } from './components/Organisms';
+import { Header, SubHeader, ChartComponent, PieSection } from './components/Organisms';
 
 export default function Home() {
   return ( 
-    <main>
+    <main className="px-10 py-4">
       <Header />
-      <SubHeader />
-      {/* <Chart /> */}
+      {/* <SubHeader /> */}
+      <ChartComponent />
+      <PieSection />
     </main>
 
   )

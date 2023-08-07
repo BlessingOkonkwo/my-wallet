@@ -7,12 +7,12 @@ import { Hamburger } from '../Atoms';
 const WalletActions = () => {
   return (
     <div>
-      <div className="hidden md:flex items-center justify-center gap-4">
+      <div className="hidden lg:flex items-center justify-between gap-4">
         <FundButton desc="+ Tranfer to Master Wallet" variant="blue" />
         <FundButton desc="+ Fund Institutional Wallet" variant="white" />
       </div>
 
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <Hamburger />
       </div>
     </div>

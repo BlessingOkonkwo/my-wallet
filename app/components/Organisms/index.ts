@@ -1,3 +1,4 @@
 export { default as Header } from './Header';
 export { default as SubHeader } from './SubHeader';
-export { default as Chart } from './Chart';
+export { default as ChartComponent } from './ChartComponent';
+export { default as PieSection } from './PieSection';

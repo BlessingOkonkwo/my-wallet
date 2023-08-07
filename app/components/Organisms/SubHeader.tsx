@@ -1,6 +1,5 @@
 import React from 'react';
 import { WalletInfo, WalletActions } from '../Molecules';
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 
 const SubHeader = () => {
   return (
@@ -8,7 +7,7 @@ const SubHeader = () => {
       <WalletInfo />
       <WalletActions />
     </div>
-  )
+  ) 
 }
-
+// 0.0.4690590
 export default SubHeader

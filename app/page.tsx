@@ -7,7 +7,7 @@ export default function Home() {
       <div className="col-span-1 bg-[#1e252d]">
         <SideBar />
       </div>
-      <main className="px-10 py-4 col-span-11 grow">
+      <main className="px-10 py-4 col-span-11">
         <Header />
         <SubHeader />
         <ChartComponent />

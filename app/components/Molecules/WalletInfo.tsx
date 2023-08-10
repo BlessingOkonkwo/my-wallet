@@ -2,10 +2,10 @@ import React from 'react';
 import * as Separator from '@radix-ui/react-separator';
 import { useGlobalContext } from '../../context';
 
-type Props = {
-  wallet: string;
-  id: string;
-}
+// type Props = {
+//   wallet: string;
+//   id: string;
+// }
 const WalletInfo = ()  => {
   const {wallet, id} = useGlobalContext();
   return (
